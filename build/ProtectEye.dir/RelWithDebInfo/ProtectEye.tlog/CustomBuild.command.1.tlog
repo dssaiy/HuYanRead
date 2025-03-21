@@ -1,0 +1,44 @@
+^E:\HUYANREAD\BUILD\CMAKEFILES\7D60C41CC5562DA7930F5AD226DC59F8\MOC_CHAPTERDIALOG.CPP.RULE
+setlocal
+cd E:\HuYanRead\build\src
+if %errorlevel% neq 0 goto :cmEnd
+E:
+if %errorlevel% neq 0 goto :cmEnd
+D:\Software\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\moc.exe @E:/HuYanRead/build/src/moc_chapterdialog.cpp_parameters
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\HUYANREAD\SRC\SETTINGSDIALOG.UI
+setlocal
+D:\Software\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\uic.exe -o E:/HuYanRead/build/ui_SettingsDialog.h E:/HuYanRead/src/SettingsDialog.ui
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\HUYANREAD\SRC\MAINWINDOW.QRC
+setlocal
+D:\Software\Qt\Qt5.14.2\5.14.2\msvc2017_64\bin\rcc.exe --name mainwindow --output E:/HuYanRead/build/qrc_mainwindow.cpp E:/HuYanRead/src/mainwindow.qrc
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\HUYANREAD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/HuYanRead -BE:/HuYanRead/build --check-stamp-file E:/HuYanRead/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

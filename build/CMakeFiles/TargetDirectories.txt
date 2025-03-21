@@ -1,0 +1,4 @@
+E:/HuYanRead/build/CMakeFiles/ProtectEye.dir
+E:/HuYanRead/build/CMakeFiles/DeployQt.dir
+E:/HuYanRead/build/CMakeFiles/ALL_BUILD.dir
+E:/HuYanRead/build/CMakeFiles/ZERO_CHECK.dir
