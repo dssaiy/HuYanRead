@@ -1,6 +1,0 @@
--IE:/HuYanRead/build
--DWIN32
---compiler-flavor=msvc
--o
-E:/HuYanRead/build/src/moc_chapterdialog.cpp
-E:/HuYanRead/src/chapterdialog.h
